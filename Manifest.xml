@@ -11,8 +11,8 @@
 	<DisplayName DefaultValue="Mail Content"/>
 
 	<Description DefaultValue="This add-in show the selected mail content"/>
-	<IconUrl DefaultValue="https://mangeet02.github.io/Dialog-Window-API-Mail-Content/images/icon.png"/>
-	<HighResolutionIconUrl DefaultValue="https://mangeet02.github.io/Dialog-Window-API-Mail-Content/images/icon.png" />
+	<IconUrl DefaultValue="https://mangeet02.github.io/Dialog-Window-API-Mail-Content/icon.png"/>
+	<HighResolutionIconUrl DefaultValue="https://mangeet02.github.io/Dialog-Window-API-Mail-Content/icon.png" />
 	<Hosts>
 		<Host Name="Mailbox"/>
 	</Hosts>
@@ -71,9 +71,9 @@
 		</Hosts>
 		<Resources>
 			<bt:Images>
-				<bt:Image id="icon-16" DefaultValue="https://mangeet02.github.io/Dialog-Window-API-Mail-Content/images/icon.png" />
-				<bt:Image id="icon-32" DefaultValue="https://mangeet02.github.io/Dialog-Window-API-Mail-Content/images/icon.png"/>
-				<bt:Image id="icon-80" DefaultValue="https://mangeet02.github.io/Dialog-Window-API-Mail-Content/images/icon.png" />
+				<bt:Image id="icon-16" DefaultValue="https://mangeet02.github.io/Dialog-Window-API-Mail-Content/icon.png"/>
+				<bt:Image id="icon-32" DefaultValue="https://mangeet02.github.io/Dialog-Window-API-Mail-Content/icon.png"/>
+				<bt:Image id="icon-80" DefaultValue="https://mangeet02.github.io/Dialog-Window-API-Mail-Content/icon.png"/>
 			</bt:Images>
 			<bt:Urls>
 			    <bt:Url id="functionFile" DefaultValue="https://mangeet02.github.io/Dialog-Window-API-Mail-Content/index.html"/>
@@ -126,9 +126,9 @@
 			</Hosts>
 			<Resources>
 				<bt:Images>
-					<bt:Image id="icon-16" DefaultValue="https://mangeet02.github.io/Dialog-Window-API-Mail-Content/images/icon.png" />
-				    <bt:Image id="icon-32" DefaultValue="https://mangeet02.github.io/Dialog-Window-API-Mail-Content/images/icon.png"/>
-				    <bt:Image id="icon-80" DefaultValue="https://mangeet02.github.io/Dialog-Window-API-Mail-Content/images/icon.png"/>
+					<bt:Image id="icon-16" DefaultValue="https://mangeet02.github.io/Dialog-Window-API-Mail-Content/icon.png"/>
+				    <bt:Image id="icon-32" DefaultValue="https://mangeet02.github.io/Dialog-Window-API-Mail-Content/icon.png"/>
+				    <bt:Image id="icon-80" DefaultValue="https://mangeet02.github.io/Dialog-Window-API-Mail-Content/icon.png"/>
 				</bt:Images>
 				<bt:Urls>
 				    <bt:Url id="functionFile" DefaultValue="https://mangeet02.github.io/Dialog-Window-API-Mail-Content/index.html"/>
