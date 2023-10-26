@@ -18,11 +18,13 @@ function main(event) {
     return;
 }
 
+/*
 Office.onReady(function () {
     $(document).ready(function () {
         loadItemProps(Office.context.mailbox.item);
     });
 });
+*/
 
 function loadItemProps(item) {
 
