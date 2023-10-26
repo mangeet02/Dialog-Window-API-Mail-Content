@@ -14,14 +14,17 @@ let dialog;
 function main(event) {
     clickEvent = event;
     openDialog();
+    loadItemProps(Office.context.mailbox.item);
     return;
 }
 
+/*
 Office.onReady(function () {
     $(document).ready(function () {
         loadItemProps(Office.context.mailbox.item);
     });
 });
+*/
 
 function loadItemProps(item) {
 
