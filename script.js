@@ -6,7 +6,7 @@ try {
     console.log("Unable to call 'Office.actions.associate'", e);
 };
 
-const PROMPT_URL = "INSERIRE URL";
+const PROMPT_URL = "https://mangeet02.github.io/Dialog-Window-API-Mail-Content/form.html";
 let clickEvent;
 let dialog;
 
@@ -18,13 +18,11 @@ function main(event) {
     return;
 }
 
-/*
 Office.onReady(function () {
     $(document).ready(function () {
         loadItemProps(Office.context.mailbox.item);
     });
 });
-*/
 
 function loadItemProps(item) {
 
