@@ -80,4 +80,12 @@ body, html {
   #button2 span {
     color: rgb(51, 119, 184) !important;
   }
+
+td.prop-val {
+    word-break: break-all;
+}
+
+.content-main {
+    margin: 10px;
+}
   
