@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mail Content</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+        <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.min.css">
+        <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.components.min.css">
+        <link rel="stylesheet" href="style.css">
+        
+        <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
+        <!-- <script>
+            Office.onReady(function() {
+                document.querySelector("#button1").addEventListener("click", () => sendMessageToParent("move"));
+                document.querySelector("#button2").addEventListener("click", () => sendMessageToParent("cancel"));
+            });
+
+            function sendMessageToParent(messageToSend) {
+                console.log(`Sending message "${messageToSend}" from prompt dialog via messageParent method`);
+                Office.context.ui.messageParent(messageToSend, { targetOrigin: "*" });
+            }
+        </script> -->
+    </head>
+    <body>
+        <div class="ms-Fabric content-main">
+            <h1 class="ms-font-xl ms-fontColor-themeDarkAlt ms-fontWeight-bold">Mail Content</h1>
+            <h1><strong>Subject</strong></h1>
+            <p class="prop-val"><code><label id="item-subject"></label></code></p>
+            <h1><strong>Message</strong></h1>
+            <p class="prop-val"><code><label id="body"></label></code></p>
+        </div>
+
+        <!-- <div id="userPopupContainer">
+            <div id="userPopupMainContainer">
+                <div id="userPopupTitle"></div>
+                <p id="user-message"></p>
+            </div>
+            <div id="userPopupFooterContainer">
+                <div id="userPopupButtonContainer">
+                    <button class="mdc-button" type="button" id="button2">
+                        <span class="mdc-button__label" id="button2-text">Cancel</span>
+                    </button>
+                    <button class="mdc-button mdc-button--raised" type="button" id="button1">
+                        <span class="mdc-button__label" id="button1-text">Move Message to Junk</span>
+                    </button>
+                </div>
+            </div>
+        </div> -->
+    </body>
+</html>
