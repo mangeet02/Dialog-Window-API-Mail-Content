@@ -11,34 +11,12 @@
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
-        <script>
-            'use strict';
-                Office.onReady(function () {
-                    $(document).ready(function () {
-                        loadItemProps(Office.context.mailbox.item);
-                    });
-                });
-            
-                function loadItemProps(item) {
-            
-                    $('#item-subject').text(item.subject);
-            
-                    Office.context.mailbox.item.body.getAsync(
-                        "text",
-                        { asyncContext: "This is passed to the callback" },
-                        function callback(result) {
-                            if (result.status === Office.AsyncResultStatus.Succeeded) {
-                                var emailBody = result.value;
-                                document.getElementById("body").textContent = emailBody;
-                            } else {
-                                console.error('Errore nel recupero del corpo della email:', result.error.message);
-                            }
-                        }
-                    );
-                }
-        </script>
+        <script src="form.js" type="text/javascript"></script>
+
+        <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.0/css/fabric.min.css">
+        
     </head>
-    <body>
+    <body class="ms-font-m ms-welcome">
         <div class="ms-Fabric content-main">
             <h1 class="ms-font-xl ms-fontColor-themeDarkAlt ms-fontWeight-bold">Mail Content</h1>
             <h1><strong>Subject</strong></h1>
