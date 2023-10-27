@@ -1,3 +1,12 @@
+Office.onReady(function (info) {
+    if (info.host === Office.MailboxEnums.HostType.Outlook) {
+        // Office is ready and it's an Outlook client
+        $(document).ready(function () {
+            loadItemProps(Office.context.mailbox.item);
+        });
+    }
+});
+
 Office.initialize = function () { };
 
 try {
@@ -14,7 +23,6 @@ let dialog;
 function main(event) {
     clickEvent = event;
     openDialog();
-    loadItemProps(Office.context.mailbox.item);
     return;
 }
 
