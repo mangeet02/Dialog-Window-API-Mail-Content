@@ -1,12 +1,3 @@
-Office.onReady(function (info) {
-    if (info.host === Office.MailboxEnums.HostType.Outlook) {
-        // Office is ready and it's an Outlook client
-        $(document).ready(function () {
-            loadItemProps(Office.context.mailbox.item);
-        });
-    }
-});
-
 Office.initialize = function () { };
 
 try {
@@ -24,32 +15,6 @@ function main(event) {
     clickEvent = event;
     openDialog();
     return;
-}
-
-/*
-Office.onReady(function () {
-    $(document).ready(function () {
-        loadItemProps(Office.context.mailbox.item);
-    });
-});
-*/
-
-function loadItemProps(item) {
-
-    $('#item-subject').text(item.subject);
-
-    Office.context.mailbox.item.body.getAsync(
-        "text",
-        { asyncContext: "This is passed to the callback" },
-        function callback(result) {
-            if (result.status === Office.AsyncResultStatus.Succeeded) {
-                var emailBody = result.value;
-                document.getElementById("body").textContent = emailBody;
-            } else {
-                console.error('Error -> No mail selected?', result.error.message);
-            }
-        }
-    );
 }
 
 function openDialog() {
