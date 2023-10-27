@@ -1,64 +1,5 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Mail Content</title>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-
-    <!-- Includi le librerie CSS di Fabric e Office UI -->
-    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.min.css">
-    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.components.min.css">
-
-    <!-- Includi jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Includi lo script di Office -->
-    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
-
-    <script>
-        'use strict';
-
-        $(document).ready(function () {
-            // Attendere che Office sia pronto prima di eseguire il codice
-            Office.onReady(function () {
-                if (Office.context.mailbox) {
-                    loadItemProps(Office.context.mailbox.item);
-                } else {
-                    console.error('Office non è stato inizializzato correttamente.');
-                }
-            });
-        });
-
-        function loadItemProps(item) {
-            $('#item-subject').text(item.subject);
-            Office.context.mailbox.item.body.getAsync(
-                "text",
-                { asyncContext: "This is passed to the callback" },
-                function callback(result) {
-                    if (result.status === Office.AsyncResultStatus.Succeeded) {
-                        var emailBody = result.value;
-                        $('#body').text(emailBody);
-                    } else {
-                        console.error('Errore nel recupero del corpo dell\'email:', result.error.message);
-                    }
-                }
-            );
-        }
-    </script>
-</head>
-<body>
-    <div class="ms-Fabric content-main">
-        <h1 class="ms-font-xl ms-fontColor-themeDarkAlt ms-fontWeight-bold">Mail Content</h1>
-        <h1><strong>Subject</strong></h1>
-        <p class="prop-val"><code><label id="item-subject"></label></code></p>
-        <h1><strong>Message</strong></h1>
-        <p class="prop-val"><code><label id="body"></label></code></p>
-    </div>
-</body>
-</html>
-
-<!-- <!DOCTYPE html>
-<html>
     <head>
         <title>Mail Content</title>
         <meta charset="utf-8" />
@@ -69,7 +10,6 @@
         <link rel="stylesheet" href="style.css">
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        
         <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
         <script>
             'use strict';
@@ -91,7 +31,7 @@
                                 var emailBody = result.value;
                                 document.getElementById("body").textContent = emailBody;
                             } else {
-                                console.error('Errore nel recupero del corpo dell\'email:', result.error.message);
+                                console.error('Errore nel recupero del corpo della email:', result.error.message);
                             }
                         }
                     );
@@ -107,4 +47,4 @@
             <p class="prop-val"><code><label id="body"></label></code></p>
         </div>
     </body>
-</html> -->
+</html>
