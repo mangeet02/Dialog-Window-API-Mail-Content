@@ -5,12 +5,12 @@ try {
 } catch (e) {
     console.log("Unable to call 'Office.actions.associate'", e);
 };
-
-const PROMPT_URL = "https://mangeet02.github.io/Dialog-Window-API-Mail-Content/form.html";
+https://rajch.github.io/learnofficeaddins/index.html
+const PROMPT_URL = "https://rajch.github.io/learnofficeaddins/index.html";
+// const PROMPT_URL = "https://mangeet02.github.io/Dialog-Window-API-Mail-Content/form.html";
 let clickEvent;
 let dialog;
 
-// entry point
 function main(event) {
     clickEvent = event;
     openDialog();
