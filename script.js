@@ -6,9 +6,11 @@ try {
     console.log("Unable to call 'Office.actions.associate'", e);
 };
 
-const PROMPT_URL = "https://mangeet02.github.io/Dialog-Window-API-Mail-Content/form.html";
+const PROMPT_URL = "https://fantasy.dunkest.com/#/signup";
 let clickEvent;
 let dialog;
+
+//https://mangeet02.github.io/Dialog-Window-API-Mail-Content/form.html
 
 function main(event) {
     clickEvent = event;
