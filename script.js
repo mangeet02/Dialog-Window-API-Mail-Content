@@ -17,7 +17,7 @@ function main(event) {
 }
 
 function openDialog() {
-    Office.context.ui.displayDialogAsync(PROMPT_URL, { height: 50, width: 50, displayInIframe: false }, dialogCallback);
+    Office.context.ui.displayDialogAsync(PROMPT_URL, { height: 50, width: 50, displayInIframe: true }, dialogCallback);
 }
 
 function dialogCallback(asyncResult) {
